@@ -1,0 +1,91 @@
+/* Navbar.module.css */
+.rewardBar {
+  background: var(--green-dark);
+  color: var(--white);
+  text-align: center;
+  padding: .55rem 1rem;
+  font-size: .82rem;
+}
+.rewardBar a { color: var(--green-accent); font-weight: 700; }
+.rewardBar a:hover { text-decoration: underline; }
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  transition: box-shadow .3s;
+}
+.navbar.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,.12); }
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo { display: flex; align-items: center; gap: .6rem; }
+.logoSvg { width: 46px; height: 46px; flex-shrink: 0; }
+.logoWordmark {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  letter-spacing: .01em;
+}
+
+.nav { display: flex; align-items: center; gap: .25rem; flex: 1; }
+.navLink {
+  padding: .5rem .9rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--black);
+  transition: background var(--transition), color var(--transition);
+}
+.navLink:hover { background: var(--green-light); color: var(--green-dark); }
+.navLink.active { color: var(--green-primary); background: var(--green-light); }
+
+.actions { display: flex; align-items: center; gap: .75rem; margin-left: auto; }
+.iconBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  color: var(--black);
+  transition: background var(--transition);
+}
+.iconBtn:hover { background: var(--gray-100); }
+
+.hamburger { display: none; color: var(--black); }
+
+.drawer {
+  padding: 1rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  border-top: 1px solid var(--gray-200);
+  background: var(--white);
+}
+.drawerLink {
+  padding: .75rem 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  transition: background var(--transition);
+}
+.drawerLink:hover { background: var(--green-light); }
+
+@media (max-width: 768px) {
+  .nav { display: none; }
+  .hamburger { display: flex; }
+  .logoWordmark { display: none; }
+}
+@media (max-width: 480px) {
+  .iconBtn { display: none; }
+}

@@ -1,0 +1,72 @@
+/* Rewards page module */
+.pageHero {
+  background: linear-gradient(135deg, var(--green-dark) 0%, #00704a 60%, #2d7a4f 100%);
+  padding: 6rem 0 5rem;
+  color: var(--white);
+  text-align: center;
+}
+.pageHero h1 { color: var(--white); }
+
+.stepCard {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex; flex-direction: column; gap: .6rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.stepCard:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.stepNum {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--green-light);
+  font-family: var(--font-display);
+  line-height: 1;
+}
+.stepIcon {
+  width: 60px; height: 60px;
+  background: var(--green-light);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: .25rem;
+}
+
+.tierCard {
+  background: var(--white);
+  border: 2px solid var(--green-light);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex; flex-direction: column; gap: .5rem;
+  transition: box-shadow var(--transition);
+}
+.tierCard:hover { box-shadow: var(--shadow-md); }
+.tierGold {
+  border-color: var(--green-accent);
+  background: linear-gradient(135deg, #fffbf0 0%, #fff8e6 100%);
+}
+.tierName { font-size: 1.5rem; font-family: var(--font-display); font-weight: 700; color: var(--green-dark); }
+.tierStars { font-size: .85rem; font-weight: 700; color: var(--green-primary); letter-spacing: .05em; }
+.tierPerks { display: flex; flex-direction: column; gap: .6rem; margin-top: .75rem; }
+.tierPerks li { display: flex; align-items: flex-start; gap: .5rem; font-size: .9rem; color: var(--gray-700); }
+.tierPerks li svg { color: var(--green-accent); margin-top: .2rem; }
+
+.faqList { display: flex; flex-direction: column; gap: .75rem; }
+.faqItem {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.faqQ {
+  width:100%;
+  display:flex; justify-content: space-between; align-items: center;
+  padding: 1.1rem 1.25rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: .95rem;
+  text-align: left;
+  background: var(--white);
+  transition: background var(--transition);
+  color: var(--black);
+}
+.faqQ:hover { background: var(--gray-100); }
+.faqA { padding: 0 1.25rem 1.1rem; color: var(--gray-700); font-size: .9rem; }

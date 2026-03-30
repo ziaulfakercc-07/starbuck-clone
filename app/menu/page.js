@@ -9,7 +9,7 @@ import styles from './page.module.css';
 
 const categories = [
   { id: 'hot',    label: '☕ Hot Coffees' },
-  { id: 'cold',   label: '🧊 Coldly Coffees' },
+  { id: 'cold',   label: '🧊 Cold Coffees' },
   { id: 'frap',   label: '🥤 Frappuccino®' },
   { id: 'tea',    label: '🍵 Teas & Lemonade' },
   { id: 'food',   label: '🥐 Food & Snacks' },

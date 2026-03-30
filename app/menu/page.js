@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 import styles from './page.module.css';
 
 const categories = [
-  { id: 'hot',    label: '☕ Hot Coffees' },
+  { id: 'hot',    label: '☕ Hot hehe Coffees' },
   { id: 'cold',   label: '🧊 Cold Coffees' },
   { id: 'frap',   label: '🥤 Frappuccino®' },
   { id: 'tea',    label: '🍵 Teas & Lemonade' },

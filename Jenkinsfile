@@ -11,23 +11,25 @@ node {
         git (
             branch: 'main',
             url: 'https://github.com/ziaulfakercc-07/starbuck-clone'
-
         )
-}
-stage('Deploy to EC2') {
-    echo "Deploying to EC2..."
-    sh """
-        sudo mkdir -p ${appDir}
-        sudo chown -R jenkins:jenkins ${appDir}
+    }
 
-        rsync -av --delete --exclude='.git'
-        --exclude='node_modules' ./ ${appDir}
+    stage('Deploy to EC2') {
+        echo "Deploying to EC2..."
+        sh """
+            sudo mkdir -p ${appDir}
+            sudo chown -R jenkins:jenkins ${appDir}
 
-        cd ${appDir} && npm install && npm start
-        sudo npm install
-        sudo npm run build
-        sudo fuser -k 3000/tcp || true
-        sudo npm run start
-    """
-}
+            rsync -av --delete \
+                --exclude='.git' \
+                --exclude='node_modules' \
+                ./ ${appDir}
+
+            cd ${appDir}
+            npm install
+            npm run build
+            fuser -k 3000/tcp || true
+            npm start
+        """
+    }
 }
